@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import React from 'react';
 import './App.css'
+import About from './components/About';
+import Hero from './components/Hero';
+import Capabilities from './components/Capabilities';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +12,9 @@ function App() {
   return (
     <>
      <div >
-      hii
+      <Hero/>
+      <About/>
+      <Capabilities/>
      </div>
     </>
   )
