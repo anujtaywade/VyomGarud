@@ -4,6 +4,9 @@ import './App.css'
 import About from './components/About';
 import Hero from './components/Hero';
 import Capabilities from './components/Capabilities';
+import Highlight from './components/Highlights';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
       <Hero/>
       <About/>
       <Capabilities/>
+      <Highlight/>
+      <Contact/>
+      <Footer/>
      </div>
     </>
   )
