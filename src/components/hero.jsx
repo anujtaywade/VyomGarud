@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
 
-      {/* 🔥 Background Video */}
+    
       <video
         autoPlay
         loop
@@ -15,10 +15,10 @@ const Hero = () => {
         <source src="/bg-video.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark overlay */}
+   
       <div className="absolute inset-0 bg-black/70"></div>
 
-      {/* Content */}
+    
       <div className="relative z-10 max-w-3xl">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-orange-600">
           Vyom<span className="text-primary">Garud</span>
