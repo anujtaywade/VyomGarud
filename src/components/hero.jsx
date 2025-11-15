@@ -1,14 +1,24 @@
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
   return (
-    <section
-      className="min-h-screen flex items-center justify-center text-center px-6 bg-center bg-cover relative"
-      style={{ backgroundImage: `url('/bg-2.jpg')` }}
-    >
-   
+    <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+
+      {/* 🔥 Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
+      {/* Content */}
       <div className="relative z-10 max-w-3xl">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-orange-600">
           Vyom<span className="text-primary">Garud</span>
@@ -20,7 +30,7 @@ const Hero = () => {
 
         <a
           href="#about"
-          className="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-orange-500 transition border-1"
+          className="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-orange-500 transition"
         >
           Explore Systems
         </a>
