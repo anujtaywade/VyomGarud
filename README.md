@@ -1,16 +1,51 @@
-# React + Vite
+# Vyom Garud Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [vyom-garud-gilt.vercel.app](https://vyom-garud-gilt.vercel.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Description
 
-## React Compiler
+Vyom Garud is a simple, clean, and responsive front-end website. It provides a polished user interface with a focus on minimalism and ease of use. The site is likely designed for showcasing a product, personal brand, or project online.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive layout for mobile and desktop  
+- Clean and modern design  
+- Fast loading — optimized for performance  
+- Easy to maintain and update  
+
+---
+
+## 🛠️ Built With
+
+(Here you can fill in what you actually used, for example:)
+
+- HTML5  
+- CSS3 (or Tailwind / Bootstrap / your choice)  
+- JavaScript (if any)  
+- Deployed on **Vercel**
+
+---
+
+##  Screenshot
+
+<img width="1919" height="935" alt="Screenshot 2025-11-16 183409" src="https://github.com/user-attachments/assets/d824f788-b9e6-4335-b52a-4ca995db8100" />
+
+
+## 🚀 Getting Started
+
+These instructions will help you run the project locally.
+
+### Prerequisites
+
+- A modern web browser  
+- (Optional) Node.js and npm/yarn — if you want to run a local dev server
+
+### Installation
+
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/your-username/vyom-garud.git
