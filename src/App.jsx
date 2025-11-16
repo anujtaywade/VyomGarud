@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import React from 'react';
 import './App.css'
-import About from './components/About';
-import Hero from './components/Hero';
+import About from './components/about';
+import Hero from './components/hero';
 import Capabilities from './components/Capabilities';
 import Highlight from './components/Highlights';
 import Contact from './components/Contact';
