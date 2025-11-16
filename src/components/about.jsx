@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Counter = ({ target, title }) => {
   const [count, setCount] = useState(0);
@@ -19,10 +20,16 @@ const Counter = ({ target, title }) => {
   }, [target]);
 
   return (
-    <div className="text-center p-5 bg-black/40 border border-gray-700 rounded-xl">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="text-center p-5 bg-black/40 border border-gray-700 rounded-xl"
+    >
       <h3 className="text-4xl font-bold text-primary">{count}+</h3>
       <p className="text-gray-300 mt-1">{title}</p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -30,7 +37,6 @@ const About = () => {
   return (
     <section id="about" className="relative py-24 px-6 overflow-hidden">
 
-    
       <video
         autoPlay
         muted
@@ -41,15 +47,19 @@ const About = () => {
         <source src="/bg-v-2.mp4" type="video/mp4" />
       </video>
 
-  
       <div className="absolute inset-0 bg-black/70"></div>
 
-     
       <div className="relative z-10 max-w-6xl mx-auto bg-black/50 p-10 rounded-xl">
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          
-          <div>
+
+         
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h2 className="text-4xl font-bold mb-4 text-white">
               About <span className="text-primary">VyomGarud</span>
             </h2>
@@ -75,15 +85,16 @@ const About = () => {
                 reliability.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-        
+         
           <div className="grid grid-cols-2 gap-6 text-white">
             <Counter target={150} title="Successful Deployments" />
             <Counter target={20} title="Defense Partnerships" />
             <Counter target={98} title="System Reliability (%)" />
             <Counter target={12} title="Autonomous UAV Models" />
           </div>
+
         </div>
 
       </div>

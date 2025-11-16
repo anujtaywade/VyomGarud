@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
 
     
       <video
@@ -35,7 +35,7 @@ const Hero = () => {
           Explore Systems
         </a>
       </div>
-    </section>
+    </div>
   );
 };
 

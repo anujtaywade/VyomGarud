@@ -1,5 +1,6 @@
 import React from "react";
-import { ShieldCheck, Radar, Cpu, Activity } from "lucide-react"; 
+import { ShieldCheck, Radar, Cpu, Activity } from "lucide-react";
+import { motion } from "framer-motion";
 
 const capabilities = [
   {
@@ -24,12 +25,24 @@ const capabilities = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: { opacity: 1, y: 0, scale: 1 },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2, 
+    },
+  },
+};
+
 const Capabilities = () => {
   return (
     <section id="capabilities" className="py-28 px-6 bg-black text-white">
       <div className="max-w-7xl mx-auto">
-        
-     
         <h2 className="text-5xl font-bold text-center mb-4">
           Our <span className="text-primary">Capabilities</span>
         </h2>
@@ -38,11 +51,17 @@ const Capabilities = () => {
           performance, tactical intelligence, and real-time operational dominance.
         </p>
 
-     
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10">
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={containerVariants}
+        >
           {capabilities.map((cap, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
               className="
                 p-10 
                 bg-[#111]/70 
@@ -58,17 +77,11 @@ const Capabilities = () => {
             >
               <div className="mb-5">{cap.icon}</div>
 
-              <h3 className="text-2xl font-semibold mb-3">
-                {cap.title}
-              </h3>
-
-              <p className="text-gray-400 text-lg leading-relaxed">
-                {cap.desc}
-              </p>
-            </div>
+              <h3 className="text-2xl font-semibold mb-3">{cap.title}</h3>
+              <p className="text-gray-400 text-lg leading-relaxed">{cap.desc}</p>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

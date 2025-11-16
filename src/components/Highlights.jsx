@@ -1,5 +1,6 @@
 import React from "react";
 import { Cpu, Activity, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 const highlightsData = [
   {
@@ -19,6 +20,18 @@ const highlightsData = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
 const Highlights = () => {
   return (
     <section id="highlights" className="py-32 px-8 bg-black text-white">
@@ -30,10 +43,17 @@ const Highlights = () => {
           VyomGarud offers state-of-the-art UAV capabilities, combining AI precision, rugged design, and secure communications for mission-critical operations.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={containerVariants}
+        >
           {highlightsData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
               className="
                 p-12
                 bg-[#111]/80
@@ -51,9 +71,9 @@ const Highlights = () => {
               <div className="mb-6 flex justify-center">{item.icon}</div>
               <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
               <p className="text-gray-400 text-lg leading-relaxed">{item.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
